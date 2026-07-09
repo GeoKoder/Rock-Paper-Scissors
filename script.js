@@ -1,6 +1,7 @@
 const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
 const scissorsBtn = document.getElementById("scissors");
+const resultsDisplay = document.getElementById("results")
 
 function getComputerChoice() {
   const randomNo = Math.floor(Math.random() * 3);
@@ -17,24 +18,17 @@ function getComputerChoice() {
 function playRound(humanChoice, computerChoice) {
   if (humanChoice == "rock" && computerChoice == "scissors") {
     humanScore += 1;
-    console.log(
-      "Human wins with " + humanChoice + " and score of " + humanScore,
-    );
+    resultsDisplay.textContent = "Human wins with " + humanChoice + " and score of " + humanScore
   } else if (humanChoice == "scissors" && computerChoice == "paper") {
     humanScore += 1;
-    console.log("Human wins with " + humanChoice) +
-      " and score of " +
-      humanScore;
+    resultsDisplay.textContent = "Human wins with " + humanChoice +
+      " and score of " + humanScore
   } else if (humanChoice == "paper" && computerChoice == "rock") {
     humanScore += 1;
-    console.log(
-      "Human wins with " + humanChoice + " and score of " + humanScore,
-    );
+    resultsDisplay.textContent = "Human wins with " + humanChoice + " and score of " + humanScore
   } else {
     computerScore += 1;
-    console.log(
-      "Computer wins with " + computerChoice + " and score of " + computerScore,
-    );
+    resultsDisplay.textContent = "Computer wins with " + computerChoice + " and score of " + computerScore
   }
 }
 
@@ -54,7 +48,7 @@ function playGame() {
     playRound("scissors", getComputerChoice())
   })
 
-  
+
   // for (i = 1; i <= 5; i++) {
   //   let humanSelection = getHumanChoice();
   //   let computerSelection = getComputerChoice();
