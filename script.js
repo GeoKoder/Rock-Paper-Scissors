@@ -41,8 +41,8 @@ function setButtonsDisabled(isDisabled) {
 function endGame(winner) {
   const message =
     winner === "human"
-      ? "Game over. Human wins the match!"
-      : "Game over. Computer wins the match!";
+      ? "🏆 Humans rule! You won the game!"
+      : "🤖 Computer wins the game! Better luck next time.";
 
   resultsDisplay.textContent = message;
   resultsDisplay.classList.add("is-winner");

@@ -184,6 +184,13 @@ button {
   background: #f4c84f;
 }
 
+.results.is-winner {
+  border-color: rgba(240, 93, 63, 0.45);
+  color: #8f2b20;
+  background: rgba(240, 93, 63, 0.12);
+  box-shadow: 0 12px 24px rgba(240, 93, 63, 0.16);
+}
+
 @media (max-width: 560px) {
   .game-card {
     border-radius: 18px;
