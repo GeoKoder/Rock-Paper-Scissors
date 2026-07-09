@@ -1,20 +1,40 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RPS Game</title>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Rock Paper Scissors Game</h1>
-    <div id="results"></div>
-    <div id="rn-score"></div>
-    <div class="btns">
-      <button id="rock">Rock</button>
-      <button id="paper">Paper</button>
-      <button id="scissors">Scissors</button>
-    </div>
-    
+    <main class="game-shell">
+      <section class="game-card" aria-labelledby="game-title">
+        <p class="eyebrow">First to 5 wins</p>
+        <h1 id="game-title">Rock Paper Scissors</h1>
+        <p class="intro">Pick your move, beat the computer, and watch the score climb.</p>
+
+        <div class="scoreboard" aria-label="Current score">
+          <div class="score-card">
+            <span class="score-label">Human</span>
+            <strong id="human-score">0</strong>
+          </div>
+          <div class="score-card">
+            <span class="score-label">Computer</span>
+            <strong id="computer-score">0</strong>
+          </div>
+        </div>
+
+        <p id="results" class="results" aria-live="polite">Choose your first move.</p>
+
+        <div class="choices" aria-label="Choose your move">
+          <button class="choice-btn" type="button" data-choice="rock" id="rock">Rock</button>
+          <button class="choice-btn" type="button" data-choice="paper" id="paper">Paper</button>
+          <button class="choice-btn" type="button" data-choice="scissors" id="scissors">Scissors</button>
+        </div>
+
+        <button class="reset-btn" type="button" id="reset">Reset game</button>
+      </section>
+    </main>
 
     <script src="script.js"></script>
   </body>
